@@ -7,7 +7,7 @@
     <ProjectGuid>{96191DF5-A6E8-4C15-8B4F-8465DB8BAAF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>PlayerBeMean</RootNamespace>
-    <AssemblyName>PlayerBeMean</AssemblyName>
+    <AssemblyName>TalkativeNPCs</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -107,7 +107,7 @@
     <Error Condition="!Exists('packages\BepInEx.Core.5.4.11\build\BepInEx.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\BepInEx.Core.5.4.11\build\BepInEx.Core.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>mkdir "C:\Program Files (x86)\Steam\steamapps\common\Sailwind\BepInEx\plugins\NPCTalker"
-xcopy /y "PlayerBeMean.dll" "C:\Program Files (x86)\Steam\steamapps\common\Sailwind\BepInEx\plugins\NPCTalker"</PostBuildEvent>
+    <PostBuildEvent>mkdir "C:\Program Files (x86)\Steam\steamapps\common\Sailwind\BepInEx\plugins\TalkativeNPCs"
+xcopy /y "TalkativeNPCs.dll" "C:\Program Files (x86)\Steam\steamapps\common\Sailwind\BepInEx\plugins\TalkativeNPCs</PostBuildEvent>
   </PropertyGroup>
 </Project>
