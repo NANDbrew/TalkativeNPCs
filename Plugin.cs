@@ -10,7 +10,7 @@ namespace PlayerBeMean
     //[BepInDependency("com.app24.sailwindmoddinghelper", "2.0.3")]
     public class Plugin : BaseUnityPlugin
     {
-        public const string PLUGIN_ID = "com.yourname.npctalker";
+        public const string PLUGIN_ID = "com.nandbrew.npctalker";
         public const string PLUGIN_NAME = "Talkative NPCs";
         public const string PLUGIN_VERSION = "0.0.1";
 
