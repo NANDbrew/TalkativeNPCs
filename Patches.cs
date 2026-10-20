@@ -25,18 +25,18 @@ namespace PlayerBeMean
                     }
                 }*/
 
-        [HarmonyPatch(typeof(NPCPlayerCol))]
-        private static class ComponentAdder
-        {
-            [HarmonyPatch("RegisterAnimations")]
-            [HarmonyPostfix]
-            public static void StartPatch(NPCPlayerCol __instance)
-            {
-                UnityEngine.Object.Instantiate(GetPrefab(), __instance.transform.parent, false);
-            }
-        }
+        /*        [HarmonyPatch(typeof(NPCPlayerCol))]
+                private static class ComponentAdder
+                {
+                    [HarmonyPatch("RegisterAnimations")]
+                    [HarmonyPostfix]
+                    public static void StartPatch(NPCPlayerCol __instance)
+                    {
+                        UnityEngine.Object.Instantiate(GetPrefab(), __instance.transform, false);
+                    }
+                }*/
 
-/*        [HarmonyPatch(typeof(NPCAnimations))]
+        [HarmonyPatch(typeof(NPCAnimations))]
         private static class Patch
         {
             [HarmonyPatch("Start")]
@@ -44,11 +44,11 @@ namespace PlayerBeMean
             public static void StartPatch(NPCAnimations __instance)
             {
                 if (__instance.transform.parent == Refs.observerMirror) { return; }
-                //else if (__instance.transform.parent.GetComponent<CargoTransportDude>() != null) { return; }
 
-                UnityEngine.Object.Instantiate(GetPrefab(), __instance.transform.parent, false);
+                UnityEngine.Object.Instantiate(GetPrefab(), __instance.transform, false);
+
             }
-        }*/
+        }
     }
 
 }
