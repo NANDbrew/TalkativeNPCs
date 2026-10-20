@@ -7,7 +7,7 @@ namespace PlayerBeMean
     internal class AssetTools
     {
         public static AssetBundle bundle;
-        const string assetFile = "playerbemean.assets";
+        const string assetFile = "npctalker.assets";
         const string libFile = "MeanieBridge.dll";
 
         public static void LoadAssetBundles()    //Load the bundle
@@ -24,15 +24,15 @@ namespace PlayerBeMean
                 Assembly.LoadFrom(libFirstTry);
 
             }
-            else { Debug.LogError("PlayerBeMean: Can't find lib"); }
+            else { Debug.LogError("TalkativeNPCs: Can't find lib"); }
 
             if (File.Exists(secondTry)) bundle = AssetBundle.LoadFromFile(secondTry);
-            else { Debug.LogError("BULLSHITT!!"); }
+            else { Debug.LogError("OOPS!!"); }
             if (bundle == null)
             {
-                Debug.LogError("PlayerBeMean: Bundle not loaded! Did you place it in the correct folder?");
+                Debug.LogError("TalkativeNPCs: Bundle not loaded! Did you place it in the correct folder?");
             }
-            else { Debug.Log("PlayerBeMean: loaded bundle " + bundle.ToString()); }
+            else { Debug.Log("TalkativeNPCs: loaded bundle " + bundle.ToString()); }
 
             //bundle2 = AssetBundle.LoadFromFile(Path.Combine(dataPath, assetFile2));
 
